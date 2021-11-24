@@ -1,30 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
 
-import i18next from "i18next";
-import { intlMessage } from 'i18next-wc'
-
-// initialize i18next
-i18next.init({
-  lng: 'en-GB',
-  fallbackLng: "en",
-  resources: {
-    en: {
-      default: {
-        placeholder: 'fill in here',
-        'Selected language': 'Selected language: {{value}}'
-      },
-    },
-    fr: {
-      default: {
-        placeholder: 'remplir ici',
-        'Selected language': 'Langue choisie : {{value}}'
-      }
-    }
-  },
-  defaultNS: 'default'
-});
-
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.css',
@@ -51,11 +27,6 @@ export class MyComponent {
   }
 
   render() {
-    return (
-      <div>
-        Hello, World! I'm {this.getText()}
-        <input placeholder={intlMessage({i18next, label: 'placeholder'})} />
-      </div>
-    );
+    return <div>Hello, World! I'm {this.getText()}</div>;
   }
 }
