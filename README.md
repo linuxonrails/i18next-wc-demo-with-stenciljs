@@ -1,9 +1,8 @@
 # i18next-wc-demo-with-stenciljs
-i18next-wc demo in StencilJS
 
 ## Steps
 
-### Create an StencilJS component project
+### 1. Create an StencilJS component project
 
 ```bash
 npm init stencil
@@ -18,7 +17,7 @@ cd webcomponents/
 npm install
 ```
 
-### Test the demo files
+### 2. Test the demo files
 
 ```bash
 npm run test
@@ -56,7 +55,7 @@ Ran all test suites.
 
 (no errors)
 
-### Apply the following patch
+### 3. Apply the following patch
 
 ```patch
 diff --git a/webcomponents/src/components/my-component/my-component.tsx b/webcomponents/src/components/my-component/my-component.tsx
@@ -109,7 +108,7 @@ index 56d51d9..cc71eb4 100644
  }
 ```
 
-### Test the demo files with i18next-wc patch
+### 4. Test the demo files with i18next-wc patch
 
 ```bash
 npm run test
